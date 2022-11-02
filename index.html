@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do List</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+                <div class="container">
+                    <img src="img/fact_check.png" alt="fact_check">
+                    <h1 class="subtitle is-3 is-italic" >To-do list</h1>
+                  
+                </div>
+              </nav>
+        </div>
+        </header>
+        <br>
+        <br>
+    <br>
+    <br>
+    <h1 class="subtitle is-3 has-text-centered is-underlined" >¿Qué querés hacer?</h1>
+    <br>
+    <div class="buttons has-addons is-centered">
+      <button class="button" onclick="addForm()">añadir</button>
+      <button class="button" onclick="eliminar()">eliminar todo</button>
+    </div>
+    
+    <div id="zonaFormulario"></div>
+    <div class="container">
+    <br>
+    <section class="section">
+        <div class="box">
+        <h1 class="title">To-do list</h1>
+        <table id="tabla" class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+            <thead>
+                <tr>
+                    <th class="has-text-centered">¿Qué hacer?</th>
+                    <th class="has-text-centered">Fecha</th>
+                    <th class="has-text-centered">Realizado</th>
+                    <th class="has-text-centered">Eliminar</th>
+                </tr>
+            </thead>
+            <tbody id="lista">
+            </tbody>
+    </section>
+    </div>
+    
+    <script>
+      const addForm = () => {
+        document.getElementById("zonaFormulario").innerHTML = ``
+        document.getElementById("zonaFormulario").innerHTML += `<div class="columns is-gapless is-multiline is-mobile">
+        <div class="column is-4">
+        </div>
+        <div class="column is-2">
+            <input class="input" type="text" name="nombre" id="nombre" placeholder="Nombre">
+        </div>
+        <div class="column is-2">
+          <input class="input" type="date" name="fecha" id="fecha">
+        </div>
+        <div class="column is-4">
+        </div>
+    </div>
+    <div class="text-center">
+    <button class="button" onclick="addTodo(nombre.value, fecha.value)">Añadir</button>
+  </div>`
+      }
+    </script>
+
+    <script src="/todo_list.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>

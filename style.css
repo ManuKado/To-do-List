@@ -1,0 +1,11 @@
+#table_check {
+    text-decoration: line-through;
+    font-style: oblique;
+    color: grey;
+}
+
+button {
+    border-radius: 50%;
+    border-width: 0px;
+    background-color: white;
+}
